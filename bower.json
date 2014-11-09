@@ -1,0 +1,48 @@
+{
+  "name": "dispatcher-maket",
+  "main": "public/js/app.js",
+  "version": "0.0.0",
+  "authors": [
+    "Plasticut <plasticut@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "derby-standalone": "*",
+    "selectize": "~0.11.2",
+    "bootstrap": "~3.2.0",
+    "bootstrap-datepicker": "~1.3.0",
+    "nicescroll": "~3.5.6",
+    "spin.js": "~2.0.1"
+  },
+  "overrides": {
+    "bootstrap-datepicker": {
+      "main": [
+        "js/bootstrap-datepicker.js",
+        "css/datepicker3.css"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "derby-standalone": {
+      "main": [
+        "dist/0.6.0-alpha25/derby-standalone.js"
+      ]
+    },
+    "spin.js": {
+      "main": [
+        "spin.js",
+        "jquery.spin.js"
+      ]
+    }
+  }
+}

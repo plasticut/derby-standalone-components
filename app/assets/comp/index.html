@@ -1,0 +1,38 @@
+<script type="text/template"
+    id="d-tabs"
+    data-element="tabs"
+    data-arrays="pane"
+>
+
+    <ul class="nav nav-tabs" role="tablist">
+        {{each @pane as #pane, #i}}
+            <li class="{{if #i === selectedIndex}}active{{/}}" on-click="select(#i)">
+                <a href="#">{{#pane.title}}</a>
+            </li>
+        {{/each}}
+    </ul>
+
+    <div class="tab-content">
+        {{each @pane as #pane, #i}}
+        <div class="tab-pane {{if #i === selectedIndex}}active{{/}}">{{#pane.content}}</div>
+        {{/each}}
+    </div>
+
+</script>
+
+<script type="text/javascript">
+    (function(components) {
+
+        function Tabs() {}
+            Tabs.prototype.init = function(model) {
+            model.setNull('selectedIndex', 0);
+        };
+
+        components['d-tabs'] = Tabs;
+
+        Tabs.prototype.select = function(i) {
+            this.model.set('selectedIndex', i);
+        };
+
+    })(window.derbyComponents = window.derbyComponents || {});
+</script>
